@@ -17,14 +17,3 @@ function App() {
 }
 
 export default App;
-
-
-      // <ul>
-      //   { data?.map((item) => {
-      //     return(
-      //       <li key={item.number}>
-      //         {item.name}: {item.temperature}F
-      //       </li>
-      //     )
-      //   })}
-      // </ul>
