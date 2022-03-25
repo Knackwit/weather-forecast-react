@@ -1,4 +1,5 @@
 import useFetch from './useFetch';
+import ForecastCard from './forecast-card';
 
 function App() {
   const { data, loading, error } = useFetch("https://api.weather.gov/gridpoints/TOP/32,34/forecast");
@@ -10,17 +11,20 @@ function App() {
   return (
     <div className="App">
       <h1>Weather Forecast</h1>
-      <ul>
-        { data?.map((item) => {
-          return(
-            <li key={item.number}>
-              {item.name}: {item.temperature}F
-            </li>
-          )
-        })}
-      </ul>
+      <ForecastCard data={data}/>
     </div>
   );
 }
 
 export default App;
+
+
+      // <ul>
+      //   { data?.map((item) => {
+      //     return(
+      //       <li key={item.number}>
+      //         {item.name}: {item.temperature}F
+      //       </li>
+      //     )
+      //   })}
+      // </ul>
